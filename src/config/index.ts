@@ -11,13 +11,11 @@ export const environment = process.env.NODE_ENV
 export const port = process.env.PORT ?? ''
 export const name = process.env.NAME_API ?? ''
 
-export const pg = {
-  database: process.env.PGDATABASE ?? '',
-  host: process.env.PGHOST ?? '',
-  port: process.env.PGPORT ?? '',
-  user: process.env.PGUSER ?? '',
-  password: process.env.PGPASSWORD ?? '',
-  ssl: process.env.SSL !== 'false'
+export const db = {
+  host: process.env.DB_HOST ?? '',
+  user: process.env.DB_USER ?? '',
+  password: process.env.DB_PASSWORD ?? '',
+  database: process.env.DB_DATABASE ?? ''
 }
 
 export const corsUrl = process.env.CORS_URL ?? ''

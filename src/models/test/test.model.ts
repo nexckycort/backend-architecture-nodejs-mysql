@@ -1,4 +1,4 @@
-import { pool } from 'loaders/pgPool'
+import pool from 'loaders/mysqlPool'
 
 export default class TestModel {
   private static instance: TestModel
@@ -12,7 +12,7 @@ export default class TestModel {
   }
 
   test = async (test: number): Promise<number> => {
-    const { rows } = await pool.query('SELECT $1 + 1 test', [test])
-    return rows[0].test
+    const result: any = await pool.query('SELECT ? + 1 test', [test])
+    return +result[0].test
   }
 }
