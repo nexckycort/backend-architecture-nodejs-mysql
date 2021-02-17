@@ -1,4 +1,4 @@
-# Backend Architecture Nodejs
+# Backend Architecture Nodejs With MySQL
 
 ## The folder structure 🏢
 
